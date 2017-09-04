@@ -1,3 +1,10 @@
 <resources>
-    <dimen name="profile_num_text_size">20sp</dimen>
+    <dimen name="mine_num_text_size">22sp</dimen>
+    <dimen name="mine_num_title_text_size">14sp</dimen>
+    <dimen name="mine_name_text_size">20sp</dimen>
+    <dimen name="mine_item_text_size">22sp</dimen>
+
+    <dimen name="mine_item_margin_left">20dp</dimen>
+    <dimen name="mine_item_margin_lr">20dp</dimen>
+    <dimen name="mine_item_margin_top">5dp</dimen>
 </resources>

@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:background="@color/welcomeBackground"
     android:fitsSystemWindows="true"
-    android:theme="@style/Fullscreen"
     tools:context="com.marekchen.pets.WelcomeActivity">
 
     <Button
