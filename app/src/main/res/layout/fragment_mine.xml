@@ -9,14 +9,14 @@
 
     <ImageView
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="@dimen/mine_top_height"
         android:scaleType="centerCrop"
         android:src="@drawable/mine_background" />
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="350dp"
+        android:layout_height="@dimen/mine_top_height"
         android:paddingTop="30dp">
 
         <ImageButton
@@ -29,28 +29,43 @@
             android:id="@+id/mine_avatar"
             android:layout_width="96dp"
             android:layout_height="96dp"
-            android:layout_below="@id/mine_setting"
             android:layout_centerHorizontal="true"
+            android:paddingTop="10dp"
             android:src="@drawable/avatar_default"
             app:civ_border_color="@android:color/white"
             app:civ_border_width="2dp" />
 
-        <TextView
-            android:id="@+id/mine_nickname"
+        <RelativeLayout
+            android:id="@+id/mine_nickname_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/mine_avatar"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="15dp"
-            android:text="殷萍是大坏蛋"
-            android:textColor="@android:color/white"
-            android:textSize="@dimen/mine_name_text_size" />
+            android:layout_centerInParent="true"
+            android:layout_marginTop="15dp">
+
+            <TextView
+                android:id="@+id/mine_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="殷萍是大坏蛋"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/mine_name_text_size" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@id/mine_nickname"
+                android:src="@drawable/mine_female" />
+
+        </RelativeLayout>
 
         <TextView
             android:id="@+id/mine_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/mine_nickname"
+            android:layout_below="@id/mine_nickname_layout"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="5dp"
             android:text="殷萍很懒什么都没写~~"
@@ -168,6 +183,7 @@
         android:id="@+id/check_in_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mine_item_margin_top"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -208,9 +224,9 @@
         android:id="@+id/mine_message_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/mine_item_margin_top"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_marginTop="@dimen/mine_item_margin_top"
         app:layout_constraintTop_toBottomOf="@id/divider1">
 
         <ImageView
@@ -288,8 +304,8 @@
         android:id="@+id/feedback_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="@dimen/mine_item_margin_top"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/divider3">
 
@@ -328,8 +344,8 @@
         android:id="@+id/about_us_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginTop="@dimen/mine_item_margin_top"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@id/divider4">
 

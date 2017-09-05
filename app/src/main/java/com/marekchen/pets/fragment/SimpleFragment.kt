@@ -15,7 +15,7 @@ class SimpleFragment : Fragment() {
     private var mFakeStatusBar: View? = null
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater!!.inflate(R.layout.fragement_simple, container, false)
+        return inflater!!.inflate(R.layout.fragment_simple, container, false)
     }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
