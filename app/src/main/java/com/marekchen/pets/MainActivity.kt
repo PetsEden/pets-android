@@ -11,6 +11,7 @@ import android.support.v4.app.FragmentPagerAdapter
 import android.support.v4.view.ViewPager
 import java.util.*
 import com.jaeger.library.StatusBarUtil
+import com.marekchen.pets.fragment.HomeFragment
 import com.marekchen.pets.fragment.SimpleFragment
 
 class MainActivity : AppCompatActivity() {
@@ -42,10 +43,10 @@ class MainActivity : AppCompatActivity() {
             }
         })
 
+        mFragmentList.add(HomeFragment())
+        mFragmentList.add(SimpleFragment())
+        mFragmentList.add(SimpleFragment())
         mFragmentList.add(MineFragment())
-        mFragmentList.add(SimpleFragment())
-        mFragmentList.add(SimpleFragment())
-        mFragmentList.add(SimpleFragment())
 
         vp_home.addOnPageChangeListener(object : ViewPager.OnPageChangeListener {
             override fun onPageScrolled(position: Int, positionOffset: Float, positionOffsetPixels: Int) {
