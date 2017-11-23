@@ -6,7 +6,9 @@
     <color name="welcomeBackground">#fbbbbc</color>
 
     <color name="mineNumColor">#f8fe4a</color>
-    <color name="mineItemTextColor">#000000</color>
-    <color name="mineDividerColor">#000000</color>
+    <color name="mineItemTextColor">#464646</color>
+    <color name="mineDividerColor">#464646</color>
+
+    <color name="grayTextColor">#464646</color>
 
 </resources>
