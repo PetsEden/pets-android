@@ -22,12 +22,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setStatusBar()
+        bottom_navigation_bar.setBarBackgroundColor(android.R.color.white)
+        bottom_navigation_bar.activeColor = R.color.colorPrimaryDark
+        bottom_navigation_bar.inActiveColor = R.color.grayTextColor
         bottom_navigation_bar.setMode(BottomNavigationBar.MODE_FIXED)
         bottom_navigation_bar.setBackgroundStyle(BottomNavigationBar.BACKGROUND_STYLE_STATIC)
-        bottom_navigation_bar.addItem(BottomNavigationItem(R.drawable.ic_favorite, "One"))
-                .addItem(BottomNavigationItem(R.drawable.ic_gavel, "Two"))
-                .addItem(BottomNavigationItem(R.drawable.ic_grade, "Three"))
-                .addItem(BottomNavigationItem(R.drawable.ic_group_work, "Four"))
+        bottom_navigation_bar
+                .addItem(BottomNavigationItem(R.drawable.ic_home2, R.string.home).setInactiveIconResource(R.drawable.ic_home1))
+                .addItem(BottomNavigationItem(R.drawable.ic_found2, R.string.found).setInactiveIconResource(R.drawable.ic_found1))
+                .addItem(BottomNavigationItem(R.drawable.ic_message2, R.string.message).setInactiveIconResource(R.drawable.ic_message1))
+                .addItem(BottomNavigationItem(R.drawable.ic_mine2, R.string.mine).setInactiveIconResource(R.drawable.ic_mine1))
                 .initialise()
         bottom_navigation_bar.setTabSelectedListener(object : BottomNavigationBar.OnTabSelectedListener {
             override fun onTabSelected(position: Int) {
